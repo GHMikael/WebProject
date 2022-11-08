@@ -50,16 +50,25 @@ export default {
   //     console.log(to, from);
   //   }
   // },
-  mounted() {
-    this.updateTab()
+
+  watch: {
+    $route(to, from) {
+      // 路由变化了就执行更新样式的方法
+      this.updateTab();
+      console.log(to, from);
+    }
   },
   methods: {
     updateTab() {
+      if (!this.$route.query.courseType) {
+        return;
+      }
       this.tabList.map(menu => {
-        menu.active = menu.type === this.$route.query.courseType || 'JAVA'
+        menu.active = menu.type === this.$route.query.courseType
       })
     },
     changeTab(type) {
+
       this.$router.push({ query: { courseType: type } })
     }
   }
