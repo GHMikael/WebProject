@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .page-home {
   height: 100vh;
-  background: #D55805;
+  background: hsl(218, 16%, 36%);
   padding-top: 80px;
   box-sizing: border-box;
   .page-title {

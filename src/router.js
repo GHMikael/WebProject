@@ -19,6 +19,9 @@ import NotFound from './views/NotFound.vue';
 const routes = [
   {
     path: '/layout',
+    alias: '/',
+    // 重定向到 /home
+    redirect: '/home',
     component: Layout,
     children: [
       { path: 'home', component: Home },

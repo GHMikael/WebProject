@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div class="topbar">
-      <img src="https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-5-Vue/6/logo.png" alt="" class="logo" />
+      <img src="../assets/images/logo.png" alt="" class="logo" />
       <div class="options">
         <button class="share"></button>
         <button class="menu"></button>
@@ -23,7 +23,8 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 335px;
+
     z-index: 100;
     height: 50px;
     background: #040404;
@@ -32,8 +33,9 @@ export default {
     align-items: center;
     justify-content: space-between;
     .logo {
-      width: 61px;
-      height: 22px;
+      width: 30px;
+      height: 30px;
+      border-radius: 20%;
     }
     .options {
       display: flex;
